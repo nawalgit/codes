@@ -1,0 +1,11 @@
+from flask import Flask, request,render_template,redirect,url_for
+from flask_recaptcha import ReCaptcha
+
+app = Flask(__name__)
+
+
+app.config['RECAPTCHA_SITE_KEY'] = '6LcKOvkdAAAAADQKTyk-s4lV0CaVocx4_GI7srD3'
+
+app.config['RECAPTCHA_SECRET_KEY'] = '6LcKOvkdAAAAABMekDnBocpJTel2ZiwL1UPxsfsd'
+
+recaptcha = ReCaptcha(app) 
